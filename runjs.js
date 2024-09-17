@@ -1,5 +1,5 @@
 function runJS(cd){
-     if(cd.split('document').length>1){ throw new Error("“document” is not supposed in this runner."); } else {try {eval(cd);} catch(e){console().error(e.message);};};
+     if(cd.split('document').length>1){ console().error("“document” is not supposed in this runner."); } else {try {eval(cd);} catch(e){console().error(e.message);};};
      }
 
 function console(){
