@@ -58,11 +58,11 @@
     <script src="run.js"></script>
     <script>
        function clos(ele){
-          if(ele='gates') document.getElementById('mes').style.display='none';
+          if(ele=='gates') document.getElementById('mes').style.display='none';
           document.getElementById(ele).style.display='none';
         }
        function showm(ele){document.getElementById(ele).style.display='block'; document.getElementById("cs").style.display='block';};
-       function addo(){ document.getElementById("outputs").innerText+='> '+document.getElementById('cei').value+'\n'; runJs(document.getElementById('cei').value); document.getElementById('cei').value='';}
+       function addo(){ document.getElementById("outputs").innerText+='> '+document.getElementById('cei').value+'\n'; runJS(document.getElementById('cei').value); document.getElementById('cei').value='';}
        function cl(){ document.getElementById('cei').value='';document.getElementById('outputs').innerText=''; }
     </script>
 </body>
