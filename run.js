@@ -4,10 +4,10 @@ function runJS(cd){
 
     var printc,te;
     printc=function(v){
-      document.getElementById("outputs").innerText+='< '+v;
+      document.getElementById("outputs").innerText+='< '+v+'\n';
       }
     te=function(e){
-      document.getElementById("outputs").innerText+='< Error:'+e;
+      document.getElementById("outputs").innerText+='< Error:'+e+'\n';
     }
 var console={
       log: (v)=>printc(v),
