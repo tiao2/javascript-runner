@@ -3,6 +3,7 @@ function BackgroundSet(nm,ve){
 }
 
 function showBlock(block){
+  hideBlock();
   if(block=="widget"){ showm("zw"); } else if(block=="code"){ showm("zc"); } else if(block=="output"){ showm("zw"); } else { console.error("No such a block named "+block+"."); };
 }
 
