@@ -45,6 +45,7 @@
     </style>
 </head>
 <body>
+    <button onclick="" style="background-color:#dadada; color:black; border:none; border-radius: 10px;">运行</button>
     <div id='gates'>
         <div id='txt'>你好!这是js运行器,支持console控制台输出,并且增加了一些功能,如输出到界面,还有控件,界面信息等.<br/>提示:document被禁止使用,若在字符串中使用“document”,请使用以下方法:<br/><code>["documen","t"].join('')</code></div>
         <button onclick='clos("gates")' class='gye' id='mes'>&times;</button>
@@ -57,7 +58,7 @@
     <div id='zo' class='m'><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;控制台</h3><hr/><input placeholder='输入Javascript代码' style='border-radius: 0px; width: 65%; height: 5%;' id='cei'/><button onclick='addo()' style='border: 1px solid black; border-radius: 0px; color: black; width: 15%; height:7%;'>运行</button><button onclick='cl()' style='border: 1px solid black; border-radius: 0px; color: black; width: 15%; height: 7%;'>清空</button><div id='outputs' style='width: 100%; height: 70%; overflow: scroll;'></div></div>
     <button class='gye' style='position:absolute; display:none; top:20%; left: 68%; background-color:#dadada;' id='cs' onclick="document.getElementById('zw').style.display='none';document.getElementById('zc').style.display='none';document.getElementById('zo').style.display='none';document.getElementById('cs').style.display='none';">&times;</button>
     <script src="run.js"></script>
-    <script src="viewspace.js"></script>
+    <script src="view.js"></script>
     <script>
        function clos(ele){
           if(ele=='gates') document.getElementById('mes').style.display='none';
