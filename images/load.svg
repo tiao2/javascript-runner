@@ -1,0 +1,15 @@
+<!DOCTYPE SVG>
+<svg viewBox="-15 -15 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+  <rect x="-10" y="-10" width="20" height="20" fill="#666c" rx="4" />
+  <circle x="0" y="0" r="4" fill="#eee4" />
+  <path d="M 0 4 L 0 8 M 4 0 L 8 0 M 0 -4 L 0 -8 M -4 0 L -8 0 M 3 3 L 6 6 M -3 3 L -6 6 M 3 -3 L 6 -6 M -3 -3 L -6 -6" stroke="#0008" stroke-width="2">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0"
+      to="360"
+      dur="2s"
+      repeatCount="indefinite" />
+  </path>
+</svg>
