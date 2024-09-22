@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>代码信息</title>
+</head>
+<body>
+  <h1>发现代码:</h1>
+  <pre id='code'></pre>
+<button onclick='navigator.clipboard.writeText(document.getElementById("code").innerText); var a=document.createElement("a");
+a.href="<?php echo $refer; ?>"; a.click();'>复制并返回</button>
+<script>
+const url = new URL(window.location.href);
+const queryParams = new URLSearchParams(url.search);
+const param1 = queryParams.get('code');
+const param2 = queryParams.get('ret');
+document.getElementById("code").innerText=atob(code);
+</script>
+</body>
+</html>
