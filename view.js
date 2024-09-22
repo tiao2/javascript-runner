@@ -3,7 +3,7 @@ function BackgroundSet(nm,ve){
 }
 
 function showBlock(block){
-  if(block=="widget"){ shown("zw"); } else if(block=="code"){ shown("zc"); } else if(block=="output"){ shown("zw"); } else { console.error("No such a block named "+block); };
+  if(block=="widget"){ showm("zw"); } else if(block=="code"){ showm("zc"); } else if(block=="output"){ showm("zw"); } else { console.error("No such a block named "+block+"."); };
 }
 
 function hideBlock(){
