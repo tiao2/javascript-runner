@@ -7,5 +7,5 @@ function showBlock(block){
 }
 
 function hideBlock(){
-
+ document.getElementById('zw').style.display='none';document.getElementById('zc').style.display='none';document.getElementById('zo').style.display='none';document.getElementById('cs').style.display='none';
 }
