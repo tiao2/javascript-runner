@@ -10,7 +10,7 @@
 $queryString = $_SERVER['QUERY_STRING'];
 parse_str($queryString, $queryParams);
 $code = $queryParams->code;
-$refer = $queeyParams->return;
+$refer = $queryParams->ret;
 if (strpos($url, "http://") === 0 || strpos($url, "https://") === 0) {
     echo file_get_contents($code);
 } else {
