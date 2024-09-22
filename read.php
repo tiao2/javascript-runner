@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
+<html>
 <head>
+    <meta charset="utf-8">
     <title>代码信息</title>
 </head>
 <body>
@@ -21,3 +23,4 @@ if (strpos($url, "http://") === 0 || strpos($url, "https://") === 0) {
 <button onclick='navigator.clipboard.writeText(document.getElementById("code")); var a=document.createElement("a");
 a.href="<?php echo $refer; ?>"; a.click();'>复制并返回</button>
 </body>
+</html>
