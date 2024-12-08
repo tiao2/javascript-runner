@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #input {
+              height: 50%;
+              width: 98%;
+               border: 1px solid #ccc;
+               overflow: auto;
+               background-color: white;
+               position: absolute;
+               top: 0px;
+               left: 2%;
+               }
+            #line {
+                height: 50%;
+                 width: 2%;
+                 size: 60px;
+                 background-color: #f6f6f6;
+                 position: absolute;
+                 top: 0px;
+                 left: 1px;
+                 border: 1px solid #ccc;
+                 overflow-x: hidden;
+                 text-align: right;
+                    }
+           #buttons {
+              position: absolute;
+              top: 53%;
+              left: 0px;
+              background-color: #f6f6f6;
+              line-height: 50px;
+                }
+           .button {
+              height: 40px;
+              width: 150px;
+              border: 1px solid #45d93c;
+              color: black;
+              background-color: #f6f6f6;
+              font-size: 16px;
+                 }
+            #output {
+               font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+               position: absolute;
+               top: 53%;
+               left: 15%;
+               border: 2px solid #ccc;
+               background-color: #fefefe;
+               height: 28%;
+               width: 85%;
+             }
+   </style>
+</head>
+<body>
+   <pre id="line">1</pre>
+    <pre id='input' contenteditable='true'>//main.js</pre>
+    <div id="buttons">
+       <button onclick='execute()' class='button'>运行 &rsaquo;</button>
+       <br/>
+       <button onclick='cler()' class='button'>清空</button>
+       <br/>
+       <button onclick="location.reload()" class='button'>刷新</button>
+       <br/>
+       <button class="button" onclick='navigator.clipboard.writeText(document.getElementById("output").innerText)'>复制结果</button>
+    </div>
+<div id='output'></div>
+  <script>
+  document.getElementById("input").addEventListener('keyup', function(event){
+           var a=document.getElementById('input').innerText.split('\n').length;
+           document.getElementById("line").innerText=((Array.from({length: a-1},(_,index)=> index+1)).map(text => text+'\n')).join('');
+   });
+
+   var module1 = document.getElementById('input'),module2 = document.getElementById('line');
+              module1.addEventListener('scroll', function() {
+                module2.scrollTop = module1.scrollTop;
+                 });
+             module2.addEventListener('scroll', function() {
+                module1.scrollTop = module2.scrollTop;
+                 });
+         function execute(){
+           document.getElementById('output').innerHTML = '';
+           try {eval("const console={'log':function(ve){document.getElementById('output').innerHTML += '&gt; '+ve+'<br/>'}};"+document.getElementById('input').innerText.replace(/\/\/.*?\n/g, '\n').replace(/\/\*[\s\S]*?\*\//g, ''));} catch(e){document.getElementById('output').innerHTML = 'Error:'+e.message};
+            }
+        function cler(){
+            document.getElementById('output').innerHTML = '';
+                  }
+ </script>
+</body>
+</html>
